@@ -6,7 +6,8 @@ if(count($_POST)>0) {
 	foreach($data as $user){
 		var_dump($user);
 		if($user->userName == $_POST["userName"] && $user->password == $_POST["password"] ){
-			header("Location: success.html");
+			$_SESSION['login_user'] = $user->displayName;
+			header("Location: success.php");
 		}
 	}
 	$message = "Invalid email or password!";
