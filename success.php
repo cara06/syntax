@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(!isset($_SESSION['login_user'])){
   header("Location: index.php");
 }
@@ -18,7 +19,7 @@ if(!isset($_SESSION['login_user'])){
 <body>
 
     <div id="container">
-<h2 style="text-align:center; color: blue">You are logged in Successfully!</h2>
+    <h2 style="text-align:center; color: blue">You are logged in Successfully <?php echo $_SESSION['login_user']?> !</h2>
   </div>
 
    <div >

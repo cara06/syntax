@@ -5,6 +5,7 @@ if(count($_POST)>0) {
 	$success = false;
 	foreach($data as $user){
 		if($user->userName == $_POST["userName"] && $user->password == $_POST["password"] ){
+			session_start();
 			$_SESSION['login_user'] = $user->displayName;
 			header("Location: success.php");
 		}
