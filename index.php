@@ -41,16 +41,16 @@ if(count($_POST)>0) {
 					
 					<div class="message"><?php if($message!="") { echo $message; } ?></div>
 					<div class="wrap-input100 validate-input" data-validate = "Valid user is required: member">
-						<input class="input100" type="text" name="userName">
+						<input class="input100" type="text" name="userName" placeholder="username">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Username</span>
+						
 					</div>
 					
 					
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="password">
+						<input class="input100" type="password" name="password" placeholder="password">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Password</span>
+						
 					</div>
 
 					<div class="flex-sb-m w-full p-t-3 p-b-32">
