@@ -4,7 +4,6 @@ if(count($_POST)>0) {
 	$data = json_decode(file_get_contents("data.json"));
 	$success = false;
 	foreach($data as $user){
-		var_dump($user);
 		if($user->userName == $_POST["userName"] && $user->password == $_POST["password"] ){
 			$_SESSION['login_user'] = $user->displayName;
 			header("Location: success.php");
