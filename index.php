@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(isset($_SESSION["email"])){
+session_destroy();
+}
 $message="";
 if(count($_POST)>0) {
 	$conn = mysqli_connect("localhost","root","","syntax");
