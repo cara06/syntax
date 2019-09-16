@@ -5,14 +5,17 @@ session_destroy();
 }
 $message="";
 if(count($_POST)>0) {
-	$conn = mysqli_connect("localhost","root","","syntax");
-	$result = mysqli_query($conn,"SELECT * FROM users WHERE userName='" . $_POST["userName"] . "' and password = '". $_POST["password"]."'");
-	$count  = mysqli_num_rows($result);
-	if($count==0) {
-		$message = "Invalid email or password!";
-	} else {
-		header("Location: success.html");
+	$data = json_decode(file_get_contents("data.json"));
+	$success = false;
+	foreach($data as $user){
+		if($user->userName == $_POST["userName"] && $user->password == $_POST["password"] ){
+			session_start();
+			$_SESSION['login_user'] = $user->displayName;
+			header("Location: success.php");
+		}
 	}
+	$message = "Invalid email or password!";
+	
 }
 ?>
 
