@@ -1,4 +1,4 @@
 [
-    {"userName":"lois@gmail.com","password":"lois123","displayName":"Lois"},
-    {"userName":"syntax@gmail.com","password":"syn123","displayName":"Syntax team"}
+    {"userName":"syntaxmember01","password":"syn123","displayName":"Syntax Member 01"},
+    {"userName":"syntaxmember02","password":"syn789","displayName":"Syntax Member 02"}
 ]

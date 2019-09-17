@@ -14,7 +14,7 @@ if(count($_POST)>0) {
 			header("Location: success.php");
 		}
 	}
-	$message = "Invalid email or password!";
+	$message = "Invalid username or password!";
 	
 }
 ?>
@@ -44,17 +44,17 @@ if(count($_POST)>0) {
 					</span>
 					
 					<div class="message"><?php if($message!="") { echo $message; } ?></div>
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: member@teamsyntax.com">
-						<input class="input100" type="text" name="userName">
+					<div class="wrap-input100 validate-input" data-validate = "Valid user is required: member">
+						<input class="input100" type="text" name="userName" placeholder="username">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Email</span>
+						
 					</div>
 					
 					
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="password">
+						<input class="input100" type="password" name="password" placeholder="password">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Password</span>
+						
 					</div>
 
 					<div class="flex-sb-m w-full p-t-3 p-b-32">

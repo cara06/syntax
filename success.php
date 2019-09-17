@@ -23,7 +23,7 @@ if(!isset($_SESSION['login_user'])){
   </div>
 
    <div >
-<a href="index.php"><p style="text-transform:none;text-align:right; color: red"><<< Go back</p></a>
+  <a href="logout.php"><p style="text-transform:none;text-align:right; color: red"><<< Log out</p></a>
   </div>
 </body>
 
